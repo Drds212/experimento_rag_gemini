@@ -1,8 +1,8 @@
 import os
 from google import genai
-from google.genai import types
 from dotenv import load_dotenv
-
+#Este script lista los modelos disponibles en la api de gemini para ayudar e solucionar errores
+#en las funciones que consultan a dichos modelos 
 load_dotenv()
 
 client = genai.Client(
@@ -10,7 +10,7 @@ client = genai.Client(
     http_options={'api_version': 'v1beta'}
 )
 
-print(f"{'NOMBRE DEL MODELO':<40} | {'HABILIDADES'}")
+print(f"{'NOMBRE DEL MODELO':<40}")
 print("-" * 70)
 
 for model in client.models.list():
