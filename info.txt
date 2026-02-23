@@ -1,0 +1,62 @@
+Fundamentos de programación
+Estos son los bloques de construcción universales que comparten todos los
+lenguajes de programación. Dominarlos te permite aprender cualquier lenguaje
+nuevo en días, no meses.
+
+Sintaxis y Semántica
+La sintaxis son las reglas gramaticales del lenguaje: cómo escribir instrucciones
+válidas. La semántica es el significado de esas instrucciones: qué hacen realmente.
+Entender la diferencia es crucial para debuggear.
+
+Variables y Tipos de Datos
+Tipos Primitivos
+Números enteros: valores sin decimales, positivos o negativos.
+Números decimales: valores con punto flotante, precisión limitada.
+Booleanos: verdadero o falso, base de toda lógica.
+Caracteres: símbolos individuales de texto.
+Nulo/Vacío: ausencia intencional de valor.
+Tipos Compuestos
+Cadenas de texto: secuencias de caracteres.
+Arrays/Listas: colecciones ordenadas de elementos.
+Objetos: agrupaciones de datos relacionados.
+Tuplas: colecciones inmutables de tamaño fijo.
+Sistemas de Tipos
+Tipado estático: tipos verificados antes de ejecutar (en compilación).
+Tipado dinámico: tipos verificados durante la ejecución.
+Tipado fuerte: conversiones de tipo deben ser explícitas.
+Tipado débil: conversiones automáticas entre tipos.
+
+Sistemas de Tipos
+Tipado estático: tipos verificados antes de ejecutar (en compilación).
+Tipado dinámico: tipos verificados durante la ejecución.
+Tipado fuerte: conversiones de tipo deben ser explícitas.
+Tipado débil: conversiones automáticas entre tipos.
+
+18
+Consejo: Cada sistema de tipos tiene ventajas. Los estáticos capturan
+errores antes, los dinámicos permiten prototipar más rápido. Aprende
+ambos enfoques.
+
+Operadores
+Aritméticos: +, -, *, /, % (módulo), ** (potencia)
+Comparación: ==, !=, <, >, <=, >= (igualdad vs. identidad)
+Lógicos: AND, OR, NOT (evaluación de cortocircuito)
+Asignación: =, +=, -=, *=, /= (asignación compuesta)
+Bit a bit: AND, OR, XOR, NOT, shifts (nivel de bits)
+Ternario: condición ? valor_si : valor_no
+
+Estructuras de Control
+
+Condicionales
+Permiten ejecutar código diferente según condiciones. El if/else es el más básico. El
+switch/match es útil para múltiples casos. Aprende a evitar anidamientos excesivos
+(early return, guard clauses).
+Bucles
+for: cuando conoces el número de iteraciones.
+while: cuando la condición de parada es dinámica.
+for-each/for-in: para iterar sobre colecciones.
+do-while: cuando necesitas al menos una ejecución.
+Control de Flujo
+break: sale del bucle completamente.
+continue: salta a la siguiente iteración.
+return: termina la función y devuelve valor.

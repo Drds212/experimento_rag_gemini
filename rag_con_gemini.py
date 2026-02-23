@@ -3,7 +3,7 @@ from google import genai
 from cliente_supabase import supabase
 from dotenv import load_dotenv
 
-# --- CONFIGURACIÓN ---
+
 load_dotenv()
 GEMINI_KEY = os.environ.get('GEMINI_KEY')
 client = genai.Client(
@@ -35,14 +35,14 @@ def alimentar_cerebro(texto):
 
 
 def preguntar(duda_usuario):
-    # Generar embedding para la consulta
+
     res_query = client.models.embed_content(
         model="gemini-embedding-001",
         contents=duda_usuario,
     )
     query_vector = res_query.embeddings[0].values
 
-    # Búsqueda en Supabase (tu función RPC sigue igual)
+    # Búsqueda en Supabase
     rpc_res = supabase.rpc("buscar_documentos", {
         "query_embedding": query_vector,
         "match_threshold": 0.4,
@@ -51,7 +51,7 @@ def preguntar(duda_usuario):
 
     contexto = "\n".join([item['contenido'] for item in rpc_res.data])
     
-    # Generación de respuesta (usando el nuevo SDK)
+
     response = client.models.generate_content(
         model="models/gemini-2.5-flash",
         contents=f"Contexto: {contexto}\n\nPregunta: {duda_usuario}"
